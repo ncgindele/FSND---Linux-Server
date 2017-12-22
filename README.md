@@ -5,13 +5,14 @@ For this project, a Ubuntu Linux server was launched on the Amazon Lightsail pla
 The IP address of the web app is `34.212.235.166` and can be reached using the following url: `http://ec2-34-212-235-166.us-west-2.compute.amazonaws.com/`. It allows for SSH connections via `port 2200`, HTTP via `port 80`, and NTP via `port 123`. SSH is enforced by private RSA key.
 
 ## Software Used
-Most of the Flask and SQLAlchemy code was written for a previous project; however, SQLite was replaced with the more robust PostgreSQL. It was developed and debugged using a Virtual Box and Vagrant. Now the code is hosted using Amazon Lightsail. The following were done to accomplish this:
+Most of the Flask and SQLAlchemy code was written for a previous project; however, SQLite was replaced with the more robust PostgreSQL. Python 2.7 was used rather than 3. The project was developed and debugged using a Virtual Box and Vagrant. Now the code is hosted using Amazon Lightsail. The following were done to accomplish this:
 * Create new instance in Lightsail
-* Make a private key on a local machine using keygen
+* Make a private key on a local machine using `keygen`
 * Login via SSH from local machine and create a new user with sudo allowances
 * Using `sudo ufw` commands update the port configuration to allow incoming traffic on ports 80, 123, and 2200,
 * Set local timezone to UTC
-* Installed Git and cloned files from personal repository
+* Installed Git and cloned files from personal repository, made the .git directly inaccessible to public users
+* Disabled
 * Created a user `catalog` with permission to create database
 * Created `catalog.db`, initialized it with `database_setup.py`, and populated it with `populate_db.py`
 * Installed Apache 2, python, virtualenv, PostgreSQL, all of the dependent libraries for the web app
