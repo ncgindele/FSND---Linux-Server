@@ -1,3 +1,7 @@
+body {
+    min-width: 350px
+}
+
 .flash-messages li{
     list-style-type: circle;
     background-color: #eee;
