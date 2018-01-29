@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}" />
     <script src="//apis.google.com/js/platform.js?onload=start">
     </script>
@@ -13,10 +12,10 @@
 
 <body>
     <div class="container-fluid">
-        <div class="jumbotron center-block">
-            <h1 class="display-2">User > Artist > Album</h1>
+        <div class="jumbotron">
+            <h1 class="display-2">Categories>Items>Descriptions</h1>
             <br />
-            <p>A Multi-user Catalog using Oauth2, Apache2, Flask and Postgreql</p>
+            <p>A project for Udacity FSND using Flask and SQLAlchemy</p>
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     <ul class="flash-messages">
